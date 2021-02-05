@@ -11,7 +11,7 @@
         <!--Minhas Anotações-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minhas_anotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NoteViewController" customModule="Minhas_anotacoes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,9 +25,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B5D-y3-hHR">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="166"/>
                                         <color key="backgroundColor" red="0.97316354510000003" green="0.95833915469999997" blue="0.76375335450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="sFs-mY-gcz"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -35,10 +32,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfj-Ds-GFb">
                                         <rect key="frame" x="0.0" y="178" width="374" height="38"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="321" id="Ec4-Ir-rce"/>
                                             <constraint firstAttribute="height" constant="38" id="GGS-sM-uvc"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="botao_salvar"/>
+                                        <connections>
+                                            <action selector="salveButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2A1-7J-gaw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -60,6 +59,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Minhas Anotações" id="Tuk-OP-QrZ"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="B5D-y3-hHR" id="uwK-Ea-vR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
