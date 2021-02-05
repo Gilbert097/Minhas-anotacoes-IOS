@@ -38,4 +38,9 @@ class NoteViewController: UIViewController {
         present(alertViewController, animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //Ocultando teclado ao clicar fora do textView
+        view.endEditing(true)
+    }
+    
 }
